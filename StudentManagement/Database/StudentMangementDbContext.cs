@@ -1,4 +1,4 @@
-﻿namespace StudentManagement;
+﻿namespace StudentManagement.Database;
 using Microsoft.EntityFrameworkCore;
 
 public class StudentMangementDbContext: DbContext
