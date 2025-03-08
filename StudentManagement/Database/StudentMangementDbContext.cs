@@ -1,7 +1,7 @@
 ﻿namespace StudentManagement.Database;
 using Microsoft.EntityFrameworkCore;
 
-public class StudentMangementDbContext: DbContext
+public class StudentMangementDbContext : DbContext
 {
 	public DbSet<Student> Students { get; set; }
 	public DbSet<Course> Courses { get; set; }
@@ -23,5 +23,9 @@ public class StudentMangementDbContext: DbContext
 			.HasOne(e => e.Course)
 			.WithOne(c => c.Enrollments)
 			.HasForeignKey<Enrollment>(e => e.CourseId);
+		modelBuilder.Entity<Course>()
+			.HasOne(c => c.Instructor)
+			.WithOne(i => i.Courses)
+			.HasForeignKey<Course>(c => c.InstructorId);
 	}
 }

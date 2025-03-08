@@ -78,8 +78,15 @@
 
 ## 3. Add DateOfBirth to Student
 
-- `git checkout -b feat/add-date-of-birth-to-student`
+- `git checkout -b feat/add-date-of-birth-to-student-ef`
 - Add the `DateOfBirth` attribute in `Student`
 - generate the migrations.
 - generate the migrations artifact.
 
+## 4. Add Instructor relation
+
+- `git checkout -b feat/feat/add-instruction-relation-ef`
+- Create `Instructor` in `Models`.
+- Add the `InstructorId` attribute in `Course` and add the reference.
+- generate the migrations.
+- generate the migrations artifact.
