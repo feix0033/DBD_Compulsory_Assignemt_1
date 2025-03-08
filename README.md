@@ -71,9 +71,15 @@
 
 ## 2. Add MiddleName to Student
 
-### Create the feature branch
-
 - `git checkout -b feat/add-middle-name-to-student-ef`.
 - Add the `middleName` attribute in `Student`.
 - generate the migrations.
 - generate the migrations artifact.
+
+## 3. Add DateOfBirth to Student
+
+- `git checkout -b feat/add-date-of-birth-to-student`
+- Add the `DateOfBirth` attribute in `Student`
+- generate the migrations.
+- generate the migrations artifact.
+
