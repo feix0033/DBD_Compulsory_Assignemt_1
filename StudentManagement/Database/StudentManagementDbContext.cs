@@ -27,5 +27,9 @@ public class StudentMangementDbContext : DbContext
 			.HasOne(c => c.Instructor)
 			.WithOne(i => i.Courses)
 			.HasForeignKey<Course>(c => c.InstructorId);
+		modelBuilder.Entity<Department>()
+			.HasOne(d => d.DepartmentHead)
+			.WithOne(i => i.Department)
+			.HasForeignKey<Department>(d => d.DepartmentHeadId);
 	}
 }
