@@ -37,6 +37,18 @@
 
 ### Define the Attributes for entities
 
-see: [Student.cs](./StudentManagement/Models/Student.cs)
-see: [Course.cs](./StudentManagement/Models/Course.cs)
-see: [Enrollment.cs](./StudentManagement/Models/Enrollment.cs)
+- see: [Student.cs](./StudentManagement/Models/Student.cs)
+- see: [Course.cs](./StudentManagement/Models/Course.cs)
+- see: [Enrollment.cs](./StudentManagement/Models/Enrollment.cs)
+
+### Define the DbContext in Database directory
+
+- `dotnet new class -n StudentMangementDbContext -o Database`
+- see: [StudentMangement](./StudentManagement/Database/StudentMangementDbContext.cs)
+
+### Define the primary and foreign keys
+
+- In EF Core the primary key will auto detect by [*Id] attribute name.
+- For adding the foreign keys:
+  - Using fluentAPI, See: `StudentMangement.cs`, `onModelCrating()` override method.
+  - Add the reference Object in the Enrollment, Student and Course.

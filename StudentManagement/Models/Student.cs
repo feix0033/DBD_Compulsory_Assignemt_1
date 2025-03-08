@@ -7,4 +7,5 @@ public class Student
 	public string? LastName{ get; set; }
 	public string? Email{ get; set; }
 	public DateTime? EnrollmentDate{ get; set; }
+	public Enrollment? Enrollments { get; set; }
 }
