@@ -93,7 +93,7 @@
 
 ## 5. Rename Grade attribute to FinalGrade in Enrollment
 
-- `git checkout -b feat/rename-grade-attribute-to-final-grade-in-enrollment`
+- `git checkout -b feat/rename-grade-attribute-to-final-grade-in-enrollment-ef`
 
 ### Destructive vs non-destructive approach
 
@@ -117,3 +117,10 @@ In this case, I will use destructive approach, the reason following:
 - generate the migrations.
 - generate the migrations artifact.
 
+## 6. Add Department relation
+
+- `git checkout -b feat/add-department-relation-ef`
+- Create `Department` in `Models`.
+- Add the `DepartmentHead` attribute in `Department` and add the reference.
+- generate the migrations.
+- generate the migrations artifact.

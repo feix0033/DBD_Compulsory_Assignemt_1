@@ -7,4 +7,5 @@ public class Instructor
 	public string? LastName { get; set; }
 	public string? Email { get; set; }
 	public Course? Courses { get; set; }
+	public Department? Department { get; set; }
 }
