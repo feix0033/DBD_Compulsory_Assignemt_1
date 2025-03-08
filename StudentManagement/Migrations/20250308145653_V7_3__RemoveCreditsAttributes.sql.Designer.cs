@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentManagement.Database;
 
@@ -11,9 +12,11 @@ using StudentManagement.Database;
 namespace StudentManagement.Migrations
 {
     [DbContext(typeof(StudentMangementDbContext))]
-    partial class StudentMangementDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250308145653_V7_3__RemoveCreditsAttributes.sql")]
+    partial class V7_3__RemoveCreditsAttributessql
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

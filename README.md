@@ -143,4 +143,6 @@ So we have to handle the situation by using non-destructive approach.
 1. Add new attribute `decimalCredits` instead direct change the old attribute `Credits`.
 2. Update the CRUD code to make sure the operation will be using for both old and new attributes.
     This step will skiped since we didn't implement the CRUD.
-3.   
+3. Manully modify the migration file to duplicate the data to the new attribute.
+4. Remove the old attribute. (This step will happend after the data consistence and integraty was be checked.)
+5. Generate migration script.
