@@ -85,8 +85,35 @@
 
 ## 4. Add Instructor relation
 
-- `git checkout -b feat/feat/add-instruction-relation-ef`
+- `git checkout -b feat/add-instruction-relation-ef`
 - Create `Instructor` in `Models`.
 - Add the `InstructorId` attribute in `Course` and add the reference.
 - generate the migrations.
 - generate the migrations artifact.
+
+## 5. Rename Grade attribute to FinalGrade in Enrollment
+
+- `git checkout -b feat/rename-grade-attribute-to-final-grade-in-enrollment`
+
+### Destructive vs non-destructive approach
+
+The Destructive approach for change the database schema means directly change the schema.
+The approach broke the data consistency and integrity.
+
+For example:
+
+- Directly change the attribute name maybe will cause the data loss or application break down because the ord attribute and not be found.
+
+In this case, I will use destructive approach, the reason following:
+
+- Now we are in the inital development stage. The enviroment is development enviroment.
+- There are no data in the database.
+- The `Grade` attribute has no reference and dependence with others.
+- I want do an example for destructive approach in this case.
+
+### Use Destructive approach rename
+
+- Directly modify the `Grade` attribute in `Enrollment`.
+- generate the migrations.
+- generate the migrations artifact.
+
