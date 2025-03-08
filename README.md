@@ -124,3 +124,23 @@ In this case, I will use destructive approach, the reason following:
 - Add the `DepartmentHead` attribute in `Department` and add the reference.
 - generate the migrations.
 - generate the migrations artifact.
+
+## 7. Modify the Course Credits relation
+
+- `git checkout -b feat/modify-course-credits-relation-ef`
+
+### Use non-Destructive approach modify the attribute type
+
+In this case, because we need modify the `Credits` data type in the `Course`.
+The the non-destructive approach will cause the ord data can not fit with the new data type.
+Previously, we use the double data type, that was instore in the Database as float.
+The float default digitals is 53 digitals which maybe over the dicimal(5,2).
+And if we have data like 123.456, it will not fit with the dicimal(5,2). (The 0.06 will loss).
+So we have to handle the situation by using non-destructive approach.
+
+### The approch of non-destrctive
+
+1. Add new attribute `decimalCredits` instead direct change the old attribute `Credits`.
+2. Update the CRUD code to make sure the operation will be using for both old and new attributes.
+    This step will skiped since we didn't implement the CRUD.
+3.   
